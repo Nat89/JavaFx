@@ -30,10 +30,10 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="tf_course_name" layoutX="359.0" layoutY="111.0" prefHeight="25.0" prefWidth="163.0" promptText="podaj kategorię szkolenia" text="podaj nazwę szkolenia" />
-      <TextField fx:id="tf_course_category" layoutX="359.0" layoutY="147.0" prefHeight="25.0" prefWidth="163.0" text="podaj kategorię szkolenia" />
+      <TextField fx:id="tf_course_name" layoutX="359.0" layoutY="111.0" prefHeight="25.0" prefWidth="163.0" promptText="nazwa" />
+      <TextField fx:id="tf_course_category" layoutX="359.0" layoutY="147.0" prefHeight="25.0" prefWidth="163.0" />
       <DatePicker fx:id="dp_course_date" layoutX="359.0" layoutY="200.0" prefHeight="25.0" prefWidth="163.0" promptText="wybierz datę szkolenia" />
-      <TextField fx:id="tf_trener_name" layoutX="359.0" layoutY="233.0" prefHeight="25.0" prefWidth="163.0" text="podaj nazwisko trenera" />
+      <TextField fx:id="tf_trener_name" layoutX="359.0" layoutY="233.0" prefHeight="25.0" prefWidth="163.0" />
       <Button layoutX="389.0" layoutY="271.0" mnemonicParsing="false" onAction="#addCourse" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: GREEN;" text="DODAJ" />
       <Button layoutX="389.0" layoutY="342.0" mnemonicParsing="false" onAction="#deleteCourse" prefHeight="33.0" prefWidth="104.0" style="-fx-background-color: RED;" text="USUŃ" textFill="WHITE" />
       <Button layoutX="390.0" layoutY="312.0" mnemonicParsing="false" onAction="#getCourse" prefHeight="25.0" prefWidth="104.0" style="-fx-background-color: yellow;" text="POKAŹ" />
