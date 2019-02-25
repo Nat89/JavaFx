@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DetailsCourseController">
+   <children>
+      <Separator layoutX="43.0" layoutY="71.0" prefHeight="8.0" prefWidth="488.0" />
+      <Label fx:id="lbl_course_name" layoutX="224.0" layoutY="34.0" prefHeight="17.0" prefWidth="142.0" text="nazwa kursu">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="78.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo_sda.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="43.0" layoutY="78.0" prefHeight="199.0" prefWidth="142.0">
+         <children>
+            <Label text="Kategoria">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_course_category" text="...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Termin">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_course_date" text="...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Trener">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_course_trener" text="...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label text="Liczba uczestników">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl_course_participants" text="...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <TableView fx:id="tbl_particip" layoutX="269.0" layoutY="125.0" prefHeight="257.0" prefWidth="277.0">
+        <columns>
+          <TableColumn fx:id="tbl_particip_name" prefWidth="133.0" text="Imię" />
+          <TableColumn fx:id="tbl_particip_lastname" prefWidth="116.0" text="Nazwisko" />
+        </columns>
+      </TableView>
+      <TextField alignment="TOP_CENTER" layoutX="307.0" layoutY="89.0" prefHeight="31.0" prefWidth="210.0" text="Zapisani uczestnicy">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="tf_particip_name" layoutX="30.0" layoutY="278.0" promptText="dodaj imię" />
+      <TextField fx:id="tf_particip_lastname" layoutX="30.0" layoutY="303.0" promptText="dodaj nazwisko" />
+      <Button layoutX="77.0" layoutY="328.0" mnemonicParsing="false" style="-fx-background-color: green;" text="zapisz" textFill="#fcf7f7" />
+      <Button layoutX="77.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="49.0" style="-fx-background-color: red;" text="usuń" textFill="WHITE" />
+   </children>
+</AnchorPane>
