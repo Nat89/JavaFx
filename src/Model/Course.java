@@ -1,6 +1,8 @@
 package Model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Course {
     private int id;
@@ -8,7 +10,24 @@ public class Course {
     private  String course_category;
     private LocalDate course_date;
     private  String trener_name;
+    private List<Participant> course_participants = new ArrayList<>();
 
+    public List<Participant> getCourse_participants() {
+        return course_participants;
+    }
+    public void addParticipant(Participant p){
+        course_participants.add(p);
+
+    }
+    public void deleteParticipant (Participant p) {
+        course_participants.remove(p);
+
+
+    }
+    public int getNoParticipants(){
+        return course_participants.size();
+    }
+    //////////
 
     public Course(int id, String course_name, String course_category, LocalDate course_date, String trener_name) {
         this.id = id;
