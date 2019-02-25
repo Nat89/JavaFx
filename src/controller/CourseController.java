@@ -6,10 +6,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.time.LocalDate;
@@ -63,13 +60,21 @@ public class CourseController {
             dp_course_date.setValue(null);
             tf_trener_name.clear();
         } else {
-                System.out.println("Błąd");
+               Alert a = new Alert (Alert.AlertType.ERROR);
+               a.setTitle("Błąd");
+               a.setHeaderText("Błąd dodawania nowego kursu");
+               a.setContentText("Musisz podać wszystkie dane w celu dodania nowego kursu");
+               a.show();
             }
 
     }
 
     @FXML
     void deleteCourse(ActionEvent event) {
+    Course c_deleted = tbl_course.getSelectionModel().getSelectedItem();
+    courses.remove(c_deleted);
+    insertCoursesIntoTableView();
+    // odczyt zaznaczonego rekordu z tabeli i przypisanie jego id do zmiennej
 
     }
 
